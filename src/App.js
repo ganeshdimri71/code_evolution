@@ -1,20 +1,15 @@
-import React from 'react'
-import './App.css'
-import ClickCounterTwo from './components/ClickCounterTwo'
-import CounterOne from './components/CounterOne'
-import HoverCounterTwo from './components/HoverCounterTwo'
-import User from './components/User'
+import React, { Component } from 'react'
+import PostForm from './components/PostForm'
+import PostList from './components/PostList'
 
-const App = () => {
-  return (
-    <div className='App'>
-      <CounterOne>{(count, incrementCount) =>( <ClickCounterTwo count={count} incrementCount={incrementCount} />)}
-      </CounterOne>
-      <CounterOne>
-         { (count, incrementCount) =>( <HoverCounterTwo count={count} incrementCount={incrementCount} />)}
-      </CounterOne>
-    </div>
-  )
+class App extends Component {
+  render() {
+    return (
+      <div className='App'>
+        <PostForm />
+      </div>
+    )
+  }
 }
 
 export default App
