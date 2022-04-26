@@ -1,9 +1,9 @@
-import React from 'react'
-import HookCounterOne from './componentsOne/HookCounterOne'
+import React, { useReducer } from 'react'
+import UserForm from './componentsOne/UserForm'
 const App1 = () => {
     return (
         <div>
-            <HookCounterOne />
+            <UserForm />
         </div>
     )
 }
