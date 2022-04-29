@@ -8,8 +8,9 @@ const Node = () => {
     const [mousePosition, setMousePosition] = useState([])
     const [circleRender, setCircleRender] = useState([1, 2])
     const [circleCordinates, setCircleCordinates] = useState([])
-    let circleRef = useRef()
-    let rectRef = useRef()
+    let circleRef = useRef(null)
+    let rectRef = useRef(null)
+    const refs = useRef([]);
     const handleStageMouseDown = (e) => {
         let { x, y } = e.target.getStage().getPointerPosition();
         // if (activeTool === 'S') setRectPosition([x, y])
@@ -80,6 +81,9 @@ const Node = () => {
         let { x, y } = e.target.getStage().getPointerPosition();
         setMousePosition([x, y])
         circleCordinates.map((individualCircle, index) => {
+            // circleCordinates[index].circleRef.current
+            // circleRef.current.x()
+            // console.log('circleRef.current.x() circleRef.current.y() circleRef.current.r()', circleRef.current.x(), circleRef.current.y(), circleRef.current.radius())
             const circlePoints = {
                 x: individualCircle.x,
                 y: individualCircle.y,
@@ -98,12 +102,13 @@ const Node = () => {
             // console.log('!(rectanglePoints === undefined) && !(rectanglePoints === undefined) && !Number.isNaN(rectanglePoints) && !Number.isNaN(rectanglePoints)', !(rectanglePoints.x === undefined), !(rectanglePoints.y === undefined), !Number.isNaN(rectanglePoints.w), !Number.isNaN(rectanglePoints.h))
             // console.log('!(rectanglePoints.x )  !(rectanglePoints.y )  !Number.isNaN(rectanglePoints.w)  !Number.isNaN(rectanglePoints.h)', (rectanglePoints.x), (rectanglePoints.y), (rectanglePoints.w), (rectanglePoints.h))
             if (!(rectanglePoints.x === undefined), !(rectanglePoints.y === undefined) && !Number.isNaN(rectanglePoints.w), !Number.isNaN(rectanglePoints.h)) {
-                const overlapping = collides(individualCircle, rectanglePoints)
+                // const overlapping = collides(individualCircle, rectanglePoints)
+                const overlapping = konva.Util.haveIntersection(refs.current[index].getClientRect(), rectRef.current.getClientRect());
                 // console.log('Overlapping', overlapping)
                 if (overlapping) {
-                    circleCordinates[index].fill = 'goldenrod'
+                    refs.current[index].fill('goldenrod')
                 } else {
-                    circleCordinates[index].fill = 'black'
+                    refs.current[index].fill('black')
                 }
                 // console.log(' ,circleCordinates[index].fill', circleCordinates[index].fill)
                 // console.log(' ,circleCordinates', circleCordinates)
@@ -156,15 +161,23 @@ const Node = () => {
 
     const generateCircles = () => {
         let circleArray = []
-        for (let i = 0; i < 10; i++) {
-            circleArray.push({ x: (Math.random() * 500)+100, y: (Math.random() * 500)+100, r: 20, fill: 'black' })
+        for (let i = 0; i < 1000; i++) {
+            circleArray.push({ x: (Math.random() * 500) + 100, y: (Math.random() * 500) + 100, r: 20, fill: 'black' })
             // console.log('circleArray', circleArray)
         }
         setCircleCordinates(circleArray)
+
     }
+
+    // const onMouseEnterHandler = () => {
+    //     const overlapping = konva.Util.haveIntersection(circleRef.current.getClientRect(), rectRef.current.getClientRect());
+    //     console.log('circleRef.current.getClientRect(), rectRef.current.getClientRect()', circleRef.current.getClientRect(), rectRef.current.getClientRect())
+    //     console.log('overlapping', overlapping)
+    // }
 
     useEffect(() => {
         generateCircles()
+
     }, [])
     return (
         <>
@@ -174,7 +187,7 @@ const Node = () => {
             <div>Hello</div>
             <div>Hello</div>
             <div>Hello</div> */}
-            <Stage width={window.innerWidth} height={window.innerHeight }
+            <Stage width={window.innerWidth} height={window.innerHeight}
                 onMouseDown={(e) => handleStageMouseDown(e)}
                 onMouseMove={(e) => handleStageMouseMove(e)}
                 onMouseUp={(e) => handleStageMouseUp(e)}
@@ -194,6 +207,12 @@ const Node = () => {
                                             y={circle.y}
                                             radius={circle.r}
                                             fill={circle.fill}
+                                            ref={(element) => {
+                                                refs.current[index] = element;
+                                                
+                                            }}
+                                            listening={false}
+                                        // onMouseEnter={onMouseEnterHandler}
                                         />
                                         <Text
                                             key={Math.random() * 1000}
@@ -201,6 +220,7 @@ const Node = () => {
                                             y={circle.y}
                                             text={index + 1}
                                             fill='white'
+
                                         />
                                     </>
 
