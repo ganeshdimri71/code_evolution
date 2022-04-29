@@ -7,12 +7,18 @@ import App2 from './App2';
 import App3 from './App3';
 import App4 from './App4';
 import App5 from './App5';
+import App6 from './App6';
+import { store } from './state/store';
 import reportWebVitals from './reportWebVitals';
+import { Provider } from 'react-redux';
+import App7 from './App7';
 
 
 ReactDOM.render(
   // <React.StrictMode>
-  <App5 />
+  <Provider store={store}>
+    <App7 />
+  </Provider>
   // </React.StrictMode >
   ,
   document.getElementById('root')
