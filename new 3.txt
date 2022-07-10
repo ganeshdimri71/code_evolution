@@ -1,0 +1,76 @@
+myOrders-card-container
+/* myOrders-card-container-img */
+/* myOrders-card-container-body */
+/* myOrders-card-container-btn */
+/* myOrders-card-container-img-wrapper */
+.myOrders-card-container-body h6 {
+  height: 20px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  height: 4rem;
+  white-space: nowrap;
+  margin-bottom: -30px;
+}
+
+/* Medium devices (tablets, 768px and up) */
+@media (min-width: 768px) {
+  /* .myOrders-card-container-btn {
+    margin-left: -2px;
+  } */
+}
+
+/* Small devices (landscape phones, 576px and up) */
+@media (min-width: 576px) {
+}
+
+/* // Medium devices (tablets, 768px and up) */
+@media (min-width: 768px) {
+}
+
+/* // Large devices (desktops, 992px and up) */
+@media (min-width: 992px) {
+}
+
+/* // X-Large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) {
+  .myOrders-card-container {
+    width: 100%;
+    height: 81%;
+  }
+  .myOrders-card-container-img-wrapper {
+    height: 54%;
+    width: 100%;
+    position: relative;
+  }
+  .myOrders-card-container-img {
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    object-fit: contain;
+  }
+  .myOrders-card-container-body {
+    position: relative;
+  }
+  .myOrders-card-container-btn {
+    margin-left: -2px;
+  }
+}
+
+/* // XX-Large devices (larger desktops, 1400px and up) */
+@media (min-width: 1400px) {
+  .myOrders-card-container {
+    height: 100%;
+    position: relative;
+    padding-top: 56.25%;
+  }
+  .myOrders-card-container-img {
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    object-fit: cover;
+  }
+}

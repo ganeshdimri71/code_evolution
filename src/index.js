@@ -31,18 +31,17 @@
 
 import React from 'react';
 import ReactDOM from 'react-dom';
-import App14 from './App14';
-import App15 from './App15';
+import App17 from './App17';
 import reportWebVitals from './reportWebVitals';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import '../node_modules/swiper/swiper-bundle.min.css'
-import '../node_modules/swiper/swiper-bundle.min.js'
-
+import CarouselExample from './carousels/Carousel'
+import ResponsiveImage from './ResponsiveImage';
+import App18 from './App18';
 
 
 ReactDOM.render(
     <React.StrictMode>
-        <App15 />
+        <App18 />
     </React.StrictMode >
     ,
     document.getElementById('root')

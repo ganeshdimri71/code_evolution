@@ -1,0 +1,46 @@
+Images That are in the MyOrders Section.
+1. https://m.media-amazon.com/images/I/71ZgiCaAgoS._AC_UL320_.jpg
+2.https://m.media-amazon.com/images/I/A1lMcy-q03S._AC_UL320_.jpg
+3. https://m.media-amazon.com/images/I/61wN-KSWSoL._AC_UL320_.jpg
+4. https://m.media-amazon.com/images/I/51KxsLELwgL._AC_UL320_.jpg
+5. https://m.media-amazon.com/images/I/91mkFZwVH3L._AC_UL320_.jpg
+6. https://m.media-amazon.com/images/I/81X4ER0CUZL._AC_UL320_.jpg
+7. https://m.media-amazon.com/images/I/81ENrssoOdL._AC_UL320_.jpg
+8. https://m.media-amazon.com/images/I/814ANJggHIL._AC_UL320_.jpg
+
+Images That are in the My Orders Section
+1. https://images-eu.ssl-images-amazon.com/images/G/31/img21/Watches2021/June/EOSS/Headers/MW-PC-ENG.jpg
+2. https://m.media-amazon.com/images/I/71hXjKVCszL._SY355_.jpg
+3. https://m.media-amazon.com/images/I/81Kp24E370L._SY355_.jpg
+
+
+
+import recentOrderImage1 from '../Images/recentOrderImage1.jpeg'
+import recentOrderImage2 from '../Images/recentOrderImage2.jpeg'
+import recentOrderImage3 from '../Images/recentOrderImage3.jpeg'
+import recentOrderImage4 from '../Images/recentOrderImage4.jpeg'
+import recentOrderImage5 from '../Images/recentOrderImage5.jpeg'
+import recentOrderImage6 from '../Images/recentOrderImage6.jpeg'
+import recentOrderImage7 from '../Images/recentOrderImage7.jpeg'
+import recentOrderImage8 from '../Images/recentOrderImage8.jpeg'
+
+import recentOrderImage1 from '../Images/recentOrderImage1.png'
+import recentOrderImage2 from '../Images/recentOrderImage2.png'
+import recentOrderImage3 from '../Images/recentOrderImage3.png'
+import recentOrderImage4 from '../Images/recentOrderImage4.png'
+import recentOrderImage5 from '../Images/recentOrderImage5.png'
+import recentOrderImage6 from '../Images/recentOrderImage6.png'
+import recentOrderImage7 from '../Images/recentOrderImage7.png'
+import recentOrderImage8 from '../Images/recentOrderImage8.png'
+
+
+const [myOrdersImages, setMyOrdersImages] = useState([
+    recentOrderImage1, recentOrderImage2, recentOrderImage3, recentOrderImage4, recentOrderImage5, recentOrderImage6, recentOrderImage7, recentOrderImage8
+  ])
+  
+  
+  https://mdbootstrap.com/docs/b5/react/content-styles/images/#!
+  
+  .myOrders-card-container{
+    background: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQLae69GTU4Rc80M5d3rhb_xXr1ho_AtjSUWA&usqp=CAU');
+}
