@@ -41,7 +41,7 @@ import App18 from './App18';
 
 ReactDOM.render(
     <React.StrictMode>
-        <App18 />
+        <CarouselExample />
     </React.StrictMode >
     ,
     document.getElementById('root')

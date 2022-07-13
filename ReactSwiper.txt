@@ -1,0 +1,55 @@
+import React, { useRef, useState } from "react";
+// Import Swiper React components
+import { Swiper, SwiperSlide } from "swiper/react";
+
+// Import Swiper styles
+import "swiper/css";
+import "swiper/css/navigation";
+import './SwiperOne.css'
+// import required modules
+import { Navigation, Zoom } from "swiper";
+
+// Import testimonials data
+import { testimonials } from '../Store/Testimonials/testimonials'
+
+export default function SwiperOne() {
+  return (
+    <>
+      <Swiper navigation={true}
+        zoom={true}
+        modules={[Navigation, Zoom]}
+        breakpoints={{
+          640: {
+            slidesPerView: 1,
+            spaceBetween: 20,
+          },
+          768: {
+            slidesPerView: 2,
+            spaceBetween: 40,
+          },
+          1024: {
+            slidesPerView: 4,
+            spaceBetween: 50,
+          },
+        }}
+        className="mySwiper">
+        {
+          testimonials.map((testimonial, i) => {
+            <SwiperSlide key={i} >
+              <div class="profile">
+                {/* <img
+                  className="img-fluid user"
+                  src={testimonial.img}
+                  alt="customer pic"
+                /> */}
+                <p>{testimonial.description}</p>
+                <h3 className="text-center">{testimonial.name}</h3>
+              </div>
+            </SwiperSlide>
+          })
+        }
+    
+      </Swiper>
+    </>
+  );
+}
