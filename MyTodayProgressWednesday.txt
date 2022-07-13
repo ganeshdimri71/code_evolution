@@ -1,0 +1,2 @@
+Created testimonial.js for storing the values of users in array of object.
+ "react-elastic-carousel": "^0.6.1",
