@@ -34,14 +34,11 @@ import ReactDOM from 'react-dom';
 import App17 from './App17';
 import reportWebVitals from './reportWebVitals';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import CarouselExample from './carousels/Carousel'
-import ResponsiveImage from './ResponsiveImage';
-import App18 from './App18';
-
+import App23 from './App23'
 
 ReactDOM.render(
     <React.StrictMode>
-        <CarouselExample />
+        <App23 />
     </React.StrictMode >
     ,
     document.getElementById('root')
