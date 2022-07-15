@@ -34,11 +34,11 @@ import ReactDOM from 'react-dom';
 import App17 from './App17';
 import reportWebVitals from './reportWebVitals';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import App23 from './App23'
+import App25 from './App25'
 
 ReactDOM.render(
     <React.StrictMode>
-        <App23 />
+        <App25 />
     </React.StrictMode >
     ,
     document.getElementById('root')
