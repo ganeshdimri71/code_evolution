@@ -31,14 +31,13 @@
 
 import React from 'react';
 import ReactDOM from 'react-dom';
-import App17 from './App17';
 import reportWebVitals from './reportWebVitals';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import App25 from './App25'
+import App28 from './App28'
 
 ReactDOM.render(
     <React.StrictMode>
-        <App25 />
+        <App28 />
     </React.StrictMode >
     ,
     document.getElementById('root')
