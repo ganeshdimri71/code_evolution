@@ -33,13 +33,14 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import reportWebVitals from './reportWebVitals';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import App30 from './App30'
+import App31 from './App31'
 import { BrowserRouter } from 'react-router-dom'
 
 import { createGlobalStyle } from 'styled-components';
-const GlobalStyle = createGlobalStyle`
-@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200;&display=swap')
-*{
+import "bootstrap/dist/css/bootstrap.min.css";
+// const GlobalStyle = createGlobalStyle`
+// @import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200;300;400;500;600;700&display=swap');;
+/* *{
     margin:0;
     padding:0;
     box-sizing:border-box;
@@ -61,13 +62,13 @@ html,body{
 body{
     font-size:1.6rem;
 }
-`;
+`; */
 
 ReactDOM.render(
     <React.StrictMode>
         <BrowserRouter>
-            <GlobalStyle />
-                <App30 />
+             {/* <GlobalStyle />  */}
+            <App31 />
         </BrowserRouter>
 
     </React.StrictMode >
