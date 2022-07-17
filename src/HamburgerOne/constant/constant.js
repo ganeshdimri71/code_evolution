@@ -1,5 +1,5 @@
 import { BsSearch, BsPerson } from "react-icons/bs";
-import {  HiOutlineShoppingBag } from "react-icons/hi";
+import { HiOutlineShoppingBag } from "react-icons/hi";
 export const routes = [
   {
     name: "Clothing",
@@ -9,7 +9,10 @@ export const routes = [
     name: "Accessories",
     link: "/accessories",
 
-    subRoutes: [
+    subRoutesWomen: [
+      {
+        categoryOne: "Women",
+      },
       {
         name: "Dresses",
         link: "/accessories/dresses",
@@ -38,40 +41,46 @@ export const routes = [
         name: "Dhoti Pant",
         link: "/accessories/dhoti-pant",
       },
+
       {
         name: "Bralets",
         link: "/accessories/bralets",
       },
+    ],
+    subRoutesKids: [
       {
-        name: "Dresses",
+        categoryTwo: "Kids Wear",
+      },
+      {
+        name: "Dresse",
         link: "/accessories/dresses",
       },
       {
-        name: "Tops & Tunics",
+        name: "Tops & Tunic",
         link: "/accessories/tops-tunics",
       },
       {
-        name: "Plazzos",
+        name: "Plazzo",
         link: "/accessories/plazzos",
       },
       {
-        name: "Lehenga",
+        name: "Leheng",
         link: "/accessories/lehenga",
       },
       {
-        name: "Middies",
+        name: "Middie",
         link: "/accessories/middies",
       },
       {
-        name: "Salwar Sets",
+        name: "Salwar Set",
         link: "/accessories/salwar-sets",
       },
       {
-        name: "Dhoti Pant",
+        name: "Dhoti",
         link: "/accessories/dhoti-pant",
       },
       {
-        name: "Bralets",
+        name: "Bralet",
         link: "/accessories/bralets",
       },
     ],
@@ -91,11 +100,11 @@ export const iconsRoutes = [
   {
     name: "cart",
     link: "/cart",
-    icon: HiOutlineShoppingBag
+    icon: HiOutlineShoppingBag,
   },
   {
     name: "login",
     link: "/login",
-    icon: BsPerson
+    icon: BsPerson,
   },
 ];

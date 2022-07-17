@@ -6,6 +6,7 @@ import logo from "../Assets/morgan__logo-dark.png";
 import { routes } from "../constant/constant";
 import { iconsRoutes } from "../constant/constant";
 import { FaBars } from "react-icons/fa";
+import Accessories from "./Accessories/Accessories";
 
 const Navbar = ({ toggleDrawer, routes }) => {
   return (
@@ -42,9 +43,7 @@ const Navbar = ({ toggleDrawer, routes }) => {
         >
           <FaBars />
         </button>
-        <div className="navbar-logo"
-          // style={{ boxShadow: "2px 2px 2px black" }}
-        >
+        <div className="navbar-logo">
           <Avatar
             size="sm"
             src={logo}
@@ -70,6 +69,9 @@ const Navbar = ({ toggleDrawer, routes }) => {
             }}
           >
             {routes.map((route) => {
+              if (route.subRoutesWomen) {
+                return <Accessories route={route} key={route.name} />;
+              }
               return (
                 <Link
                   key={route.name}
@@ -85,12 +87,23 @@ const Navbar = ({ toggleDrawer, routes }) => {
                 </Link>
               );
             })}
+          </div>
+          <div
+            className="navbar-component-icon "
+            style={{
+              display: "flex",
+              gap: "0.5rem",
+              fontSize: "1rem",
+              alignItems: "center",
+            }}
+          >
             {iconsRoutes.map((iconRoute) => {
               return (
                 <Link
+                  className="navbar-icon"
                   key={iconRoute.name}
                   to={iconRoute.link}
-                  className="navbar-icon"
+                  // className="navbar-icon"
                 >
                   <iconRoute.icon style={{ width: "20px", height: "20px" }} />
                   {/* <svg
