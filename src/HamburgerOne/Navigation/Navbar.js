@@ -5,8 +5,9 @@ import Avatar from "@material-ui/core/Avatar";
 import logo from "../Assets/morgan__logo-dark.png";
 import { routes } from "../constant/constant";
 import { iconsRoutes } from "../constant/constant";
+import { FaBars } from "react-icons/fa";
 
-const Navbar = () => {
+const Navbar = ({ toggleDrawer, routes }) => {
   return (
     <Row
       className="navbar-wrapper"
@@ -15,11 +16,31 @@ const Navbar = () => {
       }}
     >
       <div
-        className="navbar-container my-0 mx-auto d-flex justify-content-space-between
-              align-items-center justify-content-between
+        className="navbar-container 
               "
+        style={{
+          padding: "2rem",
+          height: "70px",
+          maxWidth: "1300px",
+          margin: "0 auto",
+          display: "flex",
+          justifyContent: "space-between",
+          alignItems: "center",
+          color: "white",
+        }}
       >
-        <div className="navbar-logo">
+        <button
+          className="draw-button"
+          onClick={() => toggleDrawer()}
+          style={{
+            all: "unset",
+            fontSize: "3rem",
+            display: "grid",
+          }}
+        >
+          <FaBars />
+        </button>
+        <div className="navbar-logo" style={{ fontSixe: "3rem" }}>
           <Avatar
             size="sm"
             src={logo}
@@ -28,11 +49,35 @@ const Navbar = () => {
             height={50}
           />
         </div>
-        <div className="navbar-right">
-          <div className="navbar-component d-flex align-items-center">
+        <div
+          className="navbar-right"
+          style={{
+            display: "flex",
+            gap: "2rem",
+          }}
+        >
+          <div
+            className="navbar-component"
+            style={{
+              display: "flex",
+              gap: "1rem",
+              fontSize: "2rem",
+              alignItems: "center",
+            }}
+          >
             {routes.map((route) => {
               return (
-                <Link key={route.name} to={route.link} className="navbar-link">
+                <Link
+                  key={route.name}
+                  to={route.link}
+                  className="navbar-link"
+                  style={{
+                    textDecoration: "none",
+                    color: "white",
+                    padding: "0.5rem",
+                    transition: "0.5s ease",
+                  }}
+                >
                   {route.name}
                 </Link>
               );

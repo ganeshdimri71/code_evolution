@@ -28,7 +28,7 @@
 }
 
 .navbar-icon {
-  padding: 0.3rem .5rem;
+  padding: 0.3rem 0.5rem;
   /* background-color: white; */
   /* border: 1px solid black; */
   /* border-radius: 3rem; */
@@ -42,6 +42,17 @@
   box-shadow: 0px 0px 10px yellow;
 }
 
+.back-drop {
+  height: 100%;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.2);
+  z-index: 100;
+  position: absolute;
+  transition: 0.3s ease;
+  top: 0;
+  left: 0;
+}
+
 @media (max-width: 768px) {
   .navbar {
     font-size: 50%;
@@ -53,6 +64,14 @@
     font-size: 40%;
   }
 }
-.navbar-wrapper {
-  /* font-size: 1.6rem; */
+@media (max-width: 768px) {
+  .navbar-link {
+    display: none;
+  }
+}
+
+@media (min-width: 768px) {
+  .draw-button {
+    /* display: none !important; */
+  }
 }
