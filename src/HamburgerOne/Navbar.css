@@ -1,22 +1,22 @@
-@import url("https://fonts.googleapis.com/css2?family=Oswald:wght@200;300;400;500;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Oswald:wght@500&display=swap");
 .navbar-wrapper {
-  /* font-family: "Oswald", sans-serif; */
-  font-size: 62.5%;
+  font-family: "Oswald", sans-serif;
+  /* font-size: 62.5%; */
 }
 
 .navbar-container {
   height: 70px;
-  max-width: 1300px;
+  /* max-width: 1300px; */
   color: white;
 }
 
 .navbar-component {
-  font-size: 1rem;
+  font-size: 0.5rem;
   gap: 0.5rem;
 }
 .navbar-link {
   text-decoration: none;
-  color: white;
+  color: black;
   padding: 0.5rem;
   transition: 0.5s ease;
 }
@@ -27,8 +27,23 @@
   box-shadow: 0px 0px 10px white;
 }
 
+.navbar-link-one {
+  text-decoration: none;
+  color: white;
+  padding: 2rem 2rem;
+  transition: 0.5s ease;
+}
+.navbar-link-one:hover {
+  transition: 0.3s ease;
+  color: black !important;
+
+  background-color: white;
+  box-shadow: 0px 0px 10px white;
+}
+
 .navbar-icon {
   padding: 0.3rem 0.5rem;
+  color: black;
   /* background-color: white; */
   /* border: 1px solid black; */
   /* border-radius: 3rem; */
@@ -48,12 +63,32 @@
   background: rgba(0, 0, 0, 0.2);
   z-index: 100;
   position: absolute;
-  transition: 0.3s ease;
+  transition: 1s ease;
+  -webkit-transition: 1s ease-in-out;
   top: 0;
   left: 0;
 }
+.navbar-drawer {
+  font-family: "Oswald", sans-serif;
+  z-index: 150;
+  position: absolute;
+  top: 0;
+  height: 100vh;
+  width: 40%;
+  background: white;
+  transition: 1s linear;
+  -webkit-transition: 1s ease-in-out;
+}
 
-@media (max-width: 768px) {
+.MuiAvatar-img {
+  object-fit: fill !important;
+}
+
+.MuiAvatar-root {
+  box-shadow: 2px 2px 2px black !important;
+}
+
+/* @media (max-width: 768px) {
   .navbar {
     font-size: 50%;
   }
@@ -63,15 +98,15 @@
   .navbar {
     font-size: 40%;
   }
-}
-@media (max-width: 768px) {
-  .navbar-link {
+} */
+@media (max-width: 576px) {
+  .navbar-link-one {
     display: none;
   }
 }
 
-@media (min-width: 768px) {
+@media (min-width: 576px) {
   .draw-button {
-    /* display: none !important; */
+    display: none !important;
   }
 }

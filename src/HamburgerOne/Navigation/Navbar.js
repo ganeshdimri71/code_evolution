@@ -13,6 +13,8 @@ const Navbar = ({ toggleDrawer, routes }) => {
       className="navbar-wrapper"
       style={{
         backgroundColor: "#6f07f6",
+        width: "100%",
+        margin: "0",
       }}
     >
       <div
@@ -34,13 +36,15 @@ const Navbar = ({ toggleDrawer, routes }) => {
           onClick={() => toggleDrawer()}
           style={{
             all: "unset",
-            fontSize: "3rem",
+            fontSize: "2rem",
             display: "grid",
           }}
         >
           <FaBars />
         </button>
-        <div className="navbar-logo" style={{ fontSixe: "3rem" }}>
+        <div className="navbar-logo"
+          // style={{ boxShadow: "2px 2px 2px black" }}
+        >
           <Avatar
             size="sm"
             src={logo}
@@ -53,15 +57,15 @@ const Navbar = ({ toggleDrawer, routes }) => {
           className="navbar-right"
           style={{
             display: "flex",
-            gap: "2rem",
+            gap: "1rem",
           }}
         >
           <div
             className="navbar-component"
             style={{
               display: "flex",
-              gap: "1rem",
-              fontSize: "2rem",
+              gap: "0.5rem",
+              fontSize: "1rem",
               alignItems: "center",
             }}
           >
@@ -70,11 +74,10 @@ const Navbar = ({ toggleDrawer, routes }) => {
                 <Link
                   key={route.name}
                   to={route.link}
-                  className="navbar-link"
+                  className="navbar-link-one"
                   style={{
                     textDecoration: "none",
-                    color: "white",
-                    padding: "0.5rem",
+                    padding: "0.5rem 0.5rem",
                     transition: "0.5s ease",
                   }}
                 >
@@ -89,7 +92,8 @@ const Navbar = ({ toggleDrawer, routes }) => {
                   to={iconRoute.link}
                   className="navbar-icon"
                 >
-                  <svg
+                  <iconRoute.icon style={{ width: "20px", height: "20px" }} />
+                  {/* <svg
                     xmlns="http://www.w3.org/2000/svg"
                     width="22"
                     height="22"
@@ -98,7 +102,7 @@ const Navbar = ({ toggleDrawer, routes }) => {
                     viewBox="0 0 16 16"
                   >
                     <path d="M3 14s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1H3zm5-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6z" />
-                  </svg>
+                  </svg> */}
                   {/* <iconRoute.icon /> */}
                   {/* hello */}
                 </Link>

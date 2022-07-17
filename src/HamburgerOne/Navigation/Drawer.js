@@ -13,13 +13,13 @@ const Drawer = ({ isOpen, toggleDrawer }) => {
         <div
           className="navbar-drawer"
           style={{
-            zIndex: "150",
-            position: "absolute",
-            top: "0",
-            height: "100vh",
-            width: "40%",
-            background: "white",
-            transition: "0.3s ease",
+            // zIndex: "150",
+            // position: "absolute",
+            // top: "0",
+            // height: "100vh",
+            // width: "40%",
+            // background: "white",
+            // transition: "1s ease !important",
             transform: `translate(${(props) => (props.isOpen ? "0" : "-100")})`,
           }}
         >
@@ -27,11 +27,11 @@ const Drawer = ({ isOpen, toggleDrawer }) => {
             style={{
               display: "flex",
               flexDirection: "column",
-              gap: "2rem",
-              padding: "2rem 2rem",
+              gap: "1rem",
+              padding: "1rem 1rem",
             }}
           >
-            <h2 style={{ fontSize: "3rem" }}>
+            <h2>
               <Avatar
                 size="sm"
                 src={logo}
@@ -50,33 +50,11 @@ const Drawer = ({ isOpen, toggleDrawer }) => {
                       display: "flex",
                       textDecoration: "none",
                       color: "black",
-                      fontSize: "2.5rem",
+                      fontSize: "1rem",
                       padding: "0.5rem",
                     }}
                   >
                     {route.name}
-                  </Link>
-                );
-              })}
-              {iconsRoutes.map((iconRoute) => {
-                return (
-                  <Link
-                    key={iconRoute.name}
-                    to={iconRoute.link}
-                    className="navbar-icon"
-                  >
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      width="22"
-                      height="22"
-                      fill="currentColor"
-                      className="bi bi-person-fill search"
-                      viewBox="0 0 16 16"
-                    >
-                      <path d="M3 14s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1H3zm5-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6z" />
-                    </svg>
-                    {/* <iconRoute.icon /> */}
-                    {/* hello */}
                   </Link>
                 );
               })}

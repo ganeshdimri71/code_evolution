@@ -30,6 +30,7 @@
 // reportWebVitals();
 
 import React from 'react';
+import './index.css'
 import ReactDOM from 'react-dom';
 import reportWebVitals from './reportWebVitals';
 import 'bootstrap/dist/css/bootstrap.min.css';
