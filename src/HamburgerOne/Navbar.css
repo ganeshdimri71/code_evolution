@@ -90,6 +90,8 @@
 
 .accessories {
   padding: 0.5rem 0.5rem;
+  /* z-index: 999; */
+  /* z-index: 999; */
 }
 .accessories:hover {
   transition: 0.5s ease;
@@ -98,18 +100,22 @@
   box-shadow: 0px 0px 10px white;
 }
 .accessories-subroutes {
+  background-color: white !important;
+  z-index: 999 !important;
   position: absolute;
   min-width: 12rem;
   display: flex;
   flex-direction: column;
   box-shadow: 0 8px 16px 0px rgba(0, 0, 0, 0.2);
   padding: 1.3rem;
+  top: 2.6rem;
   left: -1rem;
-  border-radius: 2rem;
+  /* border-radius: 2rem; */
   transition: visibility 0.3s ease-in-out, opacity 0.3s ease-in-out;
 }
 
 .accessories-subroute {
+  /* z-index: 999; */
   text-decoration: none;
   color: black;
   padding: 1rem;
@@ -128,6 +134,17 @@
   transition: 0.3s ease-in;
   color: #6f07f6;
   background-color: #d0a7fc;
+}
+.back-drop-acessories {
+  height: 100%;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.2);
+  z-index: 0;
+  position: absolute;
+  transition: 1s ease;
+  -webkit-transition: 1s ease-in-out;
+  top: 0;
+  left: 0;
 }
 
 /* @media (max-width: 768px) {
