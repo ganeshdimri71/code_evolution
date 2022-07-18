@@ -74,7 +74,7 @@
   position: absolute;
   top: 0;
   height: 100vh;
-  width: 40%;
+  width: 60%;
   background: white;
   transition: 1s linear;
   -webkit-transition: 1s ease-in-out;
@@ -146,7 +146,34 @@
   top: 0;
   left: 0;
 }
+/* .expand-menu {
+  max-height: 200px;
+  overflow-y: scroll;
+} */
+.expand-menu-button {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  /* font-size: 2.5rem; */
+  padding: 0.5rem;
+}
 
+.expand-sub-route-container{
+  max-height: 200px;
+  overflow-y: scroll;
+}
+
+.expand-menu-link {
+  text-decoration: none;
+  color: black;
+  /* padding: 0.5rem; */
+}
+
+.expand-heading {
+  text-decoration: none;
+  color: black;
+  padding: 0.5rem;
+}
 /* @media (max-width: 768px) {
   .navbar {
     font-size: 50%;
