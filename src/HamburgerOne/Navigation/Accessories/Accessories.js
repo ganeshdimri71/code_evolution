@@ -3,13 +3,14 @@ import styled from "styled-components";
 
 import { Link } from "react-router-dom";
 import { useState } from "react";
+import { routes } from "../../constant/constant";
 const Accessories = ({ route }) => {
   const [hover, setHover] = useState(false);
   const showSubMenu = () => {
     setHover(true);
   };
   const hideSubMenu = () => {
-    setHover(false);
+    setHover(true);
   };
 
   return (
@@ -28,31 +29,55 @@ const Accessories = ({ route }) => {
         <div className="accessories">{route.name}</div>
         {hover && (
           <div
-            className="accessories-subroutes"
+            className="accessories-subroutes d-flex flex-row"
             style={{ opacity: 1, cursor: "pointer", zIndex: 999 }}
-            onMouseEnter={showSubMenu}
-            onMouseLeave={hideSubMenu}
+            // onMouseEnter={showSubMenu}
+            // onMouseLeave={hideSubMenu}
           >
-            {route.subRoutesWomen.map((subRoute, i) => {
-              return (
-                <>
-                  {subRoute.categoryOne && (
-                    <span className="accessories-heading text-primary">
-                      {subRoute.categoryOne}
-                    </span>
-                  )}
-                  {subRoute.name && (
-                    <Link
-                      key={subRoute.name}
-                      to={subRoute.link}
-                      className="accessories-subroute"
-                    >
-                      {subRoute.name}
-                    </Link>
-                  )}
-                </>
-              );
-            })}
+            <div className="parent-category me-4">
+              {route.subRoutesWomen.map((subRoute, i) => {
+                return (
+                  <div className="acessories-category py-2">
+                    {subRoute.categoryOne && (
+                      <span className="accessories-heading">
+                        {subRoute.categoryOne}
+                      </span>
+                    )}
+                    {subRoute.name && (
+                      <Link
+                        key={subRoute.name}
+                        to={subRoute.link}
+                        className="accessories-subroute"
+                      >
+                        {subRoute.name}
+                      </Link>
+                    )}
+                  </div>
+                );
+              })}
+            </div>
+            <div className="parent-category">
+              {route.subRoutesKids.map((subRoute, i) => {
+                return (
+                  <div className="acessories-category py-2">
+                    {subRoute.categoryTwo && (
+                      <span className="accessories-heading">
+                        {subRoute.categoryTwo}
+                      </span>
+                    )}
+                    {subRoute.name && (
+                      <Link
+                        key={subRoute.name}
+                        to={subRoute.link}
+                        className="accessories-subroute"
+                      >
+                        {subRoute.name}
+                      </Link>
+                    )}
+                  </div>
+                );
+              })}
+            </div>
             {/* {route.subRoutesKids.map((subRoute) => {
           return (
             <>

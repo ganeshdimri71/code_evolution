@@ -74,7 +74,7 @@
   position: absolute;
   top: 0;
   height: 100vh;
-  width: 40%;
+  width: 50%;
   background: white;
   transition: 1s linear;
   -webkit-transition: 1s ease-in-out;
@@ -105,16 +105,18 @@
   box-shadow: 0px 0px 10px white;
 }
 .accessories-subroutes {
+  /* padding-right: 10rem; */
   background-color: white !important;
   z-index: 999 !important;
   position: absolute;
-  min-width: 12rem;
+  min-width: 16rem;
   display: flex;
   flex-direction: column;
   box-shadow: 0 8px 16px 0px rgba(0, 0, 0, 0.2);
-  padding: 1.3rem;
-  top: 2.6rem;
+  padding: .3rem .1rem;
+  top: 2.56rem;
   left: -1rem;
+  padding: 1rem;
   /* border-radius: 2rem; */
   transition: visibility 0.3s ease-in-out, opacity 0.3s ease-in-out;
 }
@@ -123,22 +125,31 @@
   /* z-index: 999; */
   text-decoration: none;
   color: black;
-  padding: 1rem;
-  border-radius: 0.5rem;
+  margin: 20px 0px;
+  /* padding: 1rem; */
+  /* border-radius: 0.5rem; */
   transition: 0.3s ease-in;
 }
 
 .accessories-heading {
-  padding: 1rem;
+  /* padding: 1rem;
   border-radius: 0.5rem;
   text-decoration: underline;
-  transition: 0.3s ease-in;
+  transition: 0.3s ease-in; */
+  display: inline-block;
+  text-shadow: 1px 1px 1px #f0e7f500;
+  text-decoration: none;
+  color: #e12626;
+  font-size: 19px;
+   transition: 0.3s ease-in;
+   margin-left: 0.1rem;
+   padding-left: 0.2rem;
 }
 
 .accessories-subroute:hover {
   transition: 0.3s ease-in;
   color: #6f07f6;
-  background-color: #d0a7fc;
+  /* background-color: #d0a7fc; */
 }
 .back-drop-acessories {
   height: 100%;
@@ -164,8 +175,8 @@
 }
 
 .expand-sub-route-container {
-  max-height: 200px;
-  overflow-y: scroll;
+  max-height: 260px;
+  /* overflow-y: scroll; */
 }
 
 .expand-menu-link {
@@ -179,6 +190,7 @@
   text-decoration: none;
   color: #e12626;
   font-size: 19px;
+   transition: 0.3s ease-in;
   /* padding: 0.5rem;
   /* padding: 0.5rem; */
 }

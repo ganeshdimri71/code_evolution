@@ -16,34 +16,58 @@ const ExpandMenu = ({ route }) => {
       </div>
       {isMenuOpen && (
         <div
-          className="expand-sub-route-container"
+          className="expand-sub-route-container d-flex flex-row"
           style={{
             // display: ` ${(props) => (props.isOpen ? "flex" : "none")}`,
-              display: 'flex',
+            display: "flex",
             flexDirection: "column",
             padding: "0rem 1rem",
           }}
         >
-          {route.subRoutesWomen.map((subRoute) => {
-            return (
-              <>
-                {subRoute.categoryOne && (
-                  <span className="expand-heading">
-                    {subRoute.categoryOne}
-                  </span>
-                )}
-                {subRoute.name && (
-                  <Link
-                    key={subRoute.name}
-                    to={subRoute.link}
-                    className="expand-menu-link"
-                  >
-                    {subRoute.name}
-                  </Link>
-                )}
-              </>
-            );
-          })}
+          <div className="expand-category d-flex flex-column me-3">
+            {route.subRoutesWomen.map((subRoute) => {
+              return (
+                <>
+                  {subRoute.categoryOne && (
+                    <span className="expand-heading">
+                      {subRoute.categoryOne}
+                    </span>
+                  )}
+                  {subRoute.name && (
+                    <Link
+                      key={subRoute.name}
+                      to={subRoute.link}
+                      className="expand-menu-link"
+                    >
+                      {subRoute.name}
+                    </Link>
+                  )}
+                </>
+              );
+            })}
+          </div>
+          <div className="expand-category d-flex flex-column">
+            {route.subRoutesKids.map((subRoute) => {
+              return (
+                <>
+                  {subRoute.categoryTwo && (
+                    <span className="expand-heading">
+                      {subRoute.categoryTwo}
+                    </span>
+                  )}
+                  {subRoute.name && (
+                    <Link
+                      key={subRoute.name}
+                      to={subRoute.link}
+                      className="expand-menu-link"
+                    >
+                      {subRoute.name}
+                    </Link>
+                  )}
+                </>
+              );
+            })}
+          </div>
         </div>
       )}
     </div>
