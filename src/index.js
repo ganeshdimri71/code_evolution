@@ -30,14 +30,48 @@
 // reportWebVitals();
 
 import React from 'react';
+import './index.css'
 import ReactDOM from 'react-dom';
 import reportWebVitals from './reportWebVitals';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import App28 from './App28'
+import App31 from './App31'
+import { BrowserRouter } from 'react-router-dom'
+
+import { createGlobalStyle } from 'styled-components';
+import "bootstrap/dist/css/bootstrap.min.css";
+// const GlobalStyle = createGlobalStyle`
+// @import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200;300;400;500;600;700&display=swap');;
+/* *{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html,body{
+    font-family:'Oswald',sans-serif;
+    font-size:62.5%;
+
+
+@media (max-width:768px){
+    font-size:50%;
+}
+
+@media (max-width:450px){
+    font-size:40%;
+}
+}
+body{
+    font-size:1.6rem;
+}
+`; */
 
 ReactDOM.render(
     <React.StrictMode>
-        <App28 />
+        <BrowserRouter>
+             {/* <GlobalStyle />  */}
+            <App31 />
+        </BrowserRouter>
+
     </React.StrictMode >
     ,
     document.getElementById('root')
