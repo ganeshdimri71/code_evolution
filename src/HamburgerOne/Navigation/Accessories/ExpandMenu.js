@@ -21,14 +21,14 @@ const ExpandMenu = ({ route }) => {
             // display: ` ${(props) => (props.isOpen ? "flex" : "none")}`,
               display: 'flex',
             flexDirection: "column",
-            padding: "1rem",
+            padding: "0rem 1rem",
           }}
         >
           {route.subRoutesWomen.map((subRoute) => {
             return (
               <>
                 {subRoute.categoryOne && (
-                  <span className="accessories-heading text-primary">
+                  <span className="expand-heading">
                     {subRoute.categoryOne}
                   </span>
                 )}
@@ -36,7 +36,7 @@ const ExpandMenu = ({ route }) => {
                   <Link
                     key={subRoute.name}
                     to={subRoute.link}
-                    className="accessories-subroute"
+                    className="expand-menu-link"
                   >
                     {subRoute.name}
                   </Link>
