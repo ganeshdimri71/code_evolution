@@ -34,7 +34,7 @@ const ExpandMenu = ({ route }) => {
                     <Link
                       key={subRoute.name}
                       to={subRoute.link}
-                      className="expand-menu-link"
+                      className="expand-menu-link text-decoration-none"
                     >
                       {subRoute.name}
                     </Link>
@@ -56,7 +56,7 @@ const ExpandMenu = ({ route }) => {
                     <Link
                       key={subRoute.name}
                       to={subRoute.link}
-                      className="expand-menu-link"
+                      className="expand-menu-link text-decoration-none"
                     >
                       {subRoute.name}
                     </Link>

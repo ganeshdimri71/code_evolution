@@ -3,30 +3,13 @@
   font-family: "Oswald", sans-serif;
 }
 
-.MuiAvatar-img {
-  object-fit: contain !important;
-}
-
-.MuiAvatar-root {
-  width: 97px !important;
-  height: 96px !important;
-}
-
 .navbar-component {
   font-size: 0.5rem;
-}
-.navbar-link-one {
-  color: white;
-}
-.navbar-link-one:hover {
-  transition: 0.3s ease;
-  color: black !important;
-  background-color: white;
-  box-shadow: 0px 0px 10px white;
+  gap: 0.5rem;
 }
 .navbar-link {
   text-decoration: none;
-  color: black;
+  color: white;
   padding: 0.5rem;
   transition: 0.5s ease;
 }
@@ -36,6 +19,7 @@
   background-color: white;
   box-shadow: 0px 0px 10px white;
 }
+
 
 .navbar-icon {
   padding: 0.3rem 0.5rem;
@@ -58,16 +42,26 @@
   top: 0;
   left: 0;
 }
-
 .navbar-drawer {
   font-family: "Oswald", sans-serif;
   z-index: 150;
-  width: 50%;
   top: 0;
   height: 100vh;
+  width: 50%;
   background: white;
   transition: 1s linear;
   -webkit-transition: 1s ease-in-out;
+}
+
+.MuiAvatar-img {
+  object-fit: fill !important;
+}
+
+.MuiAvatar-root {
+  box-shadow: 0px 23px 27px #ffffff !important;
+  background-color: #060606 !important;
+  width: 45px !important;
+  height: 45px !important;
 }
 
 .accessories {
@@ -92,48 +86,40 @@
   transition: visibility 0.3s ease-in-out, opacity 0.3s ease-in-out;
 }
 
-.route-heading {
-  text-shadow: 1px 1px 1px #f0e7f500;
-  text-decoration: none;
-  color: #e12626;
-  font-size: 19px;
-   transition: 0.3s ease-in;
-}
-
 .accessories-subroute {
+  text-decoration: none;
   color: black;
   margin: 20px 0px;
   transition: 0.3s ease-in;
 }
 
+.route-heading {
+  text-shadow: 1px 1px 1px #f0e7f500;
+  color: #e12626;
+  font-size: 19px;
+   transition: 0.3s ease-in;
+}
+
 .accessories-subroute:hover {
-  transition: 0.1s ease-in;
+  transition: 0.3s ease-in;
   color: #6f07f6;
 }
+
 
 .expand-menu-button {
   padding: 0.5rem;
 }
 
 .expand-menu-link {
-  text-decoration: none;
   color: black;
 }
 
-.expand-heading {
-  text-shadow: 1px 1px 1px #f0e7f500;
-  text-decoration: none;
-  color: #e12626;
-  font-size: 19px;
-   transition: 0.3s ease-in;
-}
-
-@media (max-width: 776px) {
+@media (max-width: 756px) {
   .navbar-component {
     display: none !important;
   }
-  .navbar-container {
-    justify-content: center !important;
+  .navbar-container{
+    justify-content: center;
   }
   .navbar-logo {
     display: none !important;
@@ -141,7 +127,7 @@
   }
 }
 
-@media (min-width: 776px) {
+@media (min-width: 756px) {
   .draw-button {
     display: none !important;
   }

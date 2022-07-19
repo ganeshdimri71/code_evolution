@@ -62,7 +62,7 @@ const Navbar = ({ toggleDrawer, routes }) => {
                 <Link
                   key={route.name}
                   to={route.link}
-                  className="navbar-link-one
+                  className="navbar-link
                   text-decoration-none
                   "
                   style={{
