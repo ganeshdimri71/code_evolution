@@ -147,12 +147,12 @@ const Navbar = ({ toggleDrawer, routes }) => {
           </div>
              <button
           className="draw-button"
-          onClick={() => toggleDrawer()}
+          onClick={() => toggleDrawer()}      
           style={{
             all: "unset",
             fontSize: "2rem",
             display: "grid",
-            alignSelfL:'center'
+            alignSelf:'center '
           }}
         >
           <FaBars />

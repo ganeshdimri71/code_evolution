@@ -85,10 +85,10 @@ export const routes = [
       },
     ],
   },
-  {
-    name: "Home Decor",
-    link: "/home-decor",
-  },
+  // {
+  //   name: "Home Decor",
+  //   link: "/home-decor",
+  // },
 ];
 
 export const iconsRoutes = [
