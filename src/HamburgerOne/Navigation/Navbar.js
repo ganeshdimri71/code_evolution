@@ -7,6 +7,8 @@ import logo from "../Assets/morgan__logo-dark.png";
 import "../SearchButton.css";
 import { iconsRoutes } from "../constant/constant";
 import Accessories from "./Accessories/Accessories";
+import HomeDecor from "./HomeDecor/HomeDecor";
+import Clothing from "./Clothing/Clothing";
 
 const Navbar = ({ toggleDrawer, routes }) => {
   return (
@@ -55,8 +57,14 @@ const Navbar = ({ toggleDrawer, routes }) => {
             }}
           >
             {routes.map((route) => {
-              if (route.subRoutesWomen) {
+              if (route.subRoutesWomenAcsies) {
                 return <Accessories route={route} key={route.name} />;
+              }
+              if (route.subRoutesWomenHD) {
+                return <HomeDecor route={route} key={route.name} />;
+              }
+              if (route.subRoutesWomenCloth) {
+                return <Clothing route={route} key={route.name} />;
               }
               return (
                 <Link

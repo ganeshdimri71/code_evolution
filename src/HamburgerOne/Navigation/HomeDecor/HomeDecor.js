@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import { useState } from "react";
-const Accessories = ({ route }) => {
+const HomeDecor = ({ route }) => {
   const [hover, setHover] = useState(false);
   const showSubMenu = () => {
     setHover(true);
@@ -30,7 +30,7 @@ const Accessories = ({ route }) => {
             style={{ opacity: 1, cursor: "pointer", zIndex: 999 }}
           >
             <div className="parent-category me-4">
-              {route.subRoutesWomenAcsies.map((subRoute, i) => {
+              {route.subRoutesWomenHD.map((subRoute, i) => {
                 return (
                   <div className="acessories-category py-2">
                     {subRoute.categoryOne && (
@@ -52,7 +52,7 @@ const Accessories = ({ route }) => {
               })}
             </div>
             <div className="parent-category">
-              {route.subRoutesKidsAcsies.map((subRoute, i) => {
+              {route.subRoutesKidsHD.map((subRoute, i) => {
                 return (
                   <div className="acessories-category py-2">
                     {subRoute.categoryTwo && (
@@ -80,4 +80,4 @@ const Accessories = ({ route }) => {
   );
 };
 
-export default Accessories;
+export default HomeDecor;

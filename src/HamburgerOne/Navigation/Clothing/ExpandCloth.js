@@ -1,31 +1,30 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import { FaAngleDown, FaAngleRight } from "react-icons/fa";
-const ExpandMenu = ({ route, isMenuOpenAcc, toggleMenuAcc }) => {
+const ExpandCloth = ({ route, isMenuOpenClo, toggleMenuClo }) => {
   return (
     <div
       className="expand-menu"
-      onClick={toggleMenuAcc}
+      onClick={toggleMenuClo}
       style={{ color: "white" }}
     >
       <div
         className="expand-menu-button d-flex
       align-items-center justify-content-between"
-        onClick={toggleMenuAcc}
+        onClick={toggleMenuClo}
       >
-        {route.name} {isMenuOpenAcc ? <FaAngleDown /> : <FaAngleRight />}{" "}
+        {route.name} {isMenuOpenClo ? <FaAngleDown /> : <FaAngleRight />}{" "}
       </div>
-      {isMenuOpenAcc && (
+      {isMenuOpenClo && (
         <div
           className="expand-sub-route-container d-flex flex-row"
           style={{
             padding: "0rem 1rem",
-            maxHeight: "260px !important",
-            overflow: "hidden",
+            maxHeight: "260px",
           }}
         >
           <div className="expand-category d-flex flex-column me-3">
-            {route.subRoutesWomenAcsies.map((subRoute) => {
+            {route.subRoutesWomenCloth.map((subRoute) => {
               return (
                 <>
                   {subRoute.categoryOne && (
@@ -47,7 +46,7 @@ const ExpandMenu = ({ route, isMenuOpenAcc, toggleMenuAcc }) => {
             })}
           </div>
           <div className="expand-category d-flex flex-column">
-            {route.subRoutesKidsAcsies.map((subRoute) => {
+            {route.subRoutesKidsCloth.map((subRoute) => {
               return (
                 <>
                   {subRoute.categoryTwo && (
@@ -74,4 +73,4 @@ const ExpandMenu = ({ route, isMenuOpenAcc, toggleMenuAcc }) => {
   );
 };
 
-export default ExpandMenu;
+export default ExpandCloth;

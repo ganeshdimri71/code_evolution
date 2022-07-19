@@ -4,12 +4,7 @@ export const routes = [
   {
     name: "Clothing",
     link: "/clothing",
-  },
-  {
-    name: "Accessories",
-    link: "/accessories",
-
-    subRoutesWomen: [
+    subRoutesWomenCloth: [
       {
         categoryOne: "Women",
       },
@@ -47,7 +42,87 @@ export const routes = [
         link: "/accessories/bralets",
       },
     ],
-    subRoutesKids: [
+    subRoutesKidsCloth: [
+      {
+        categoryTwo: "Kids Wear",
+      },
+      {
+        name: "Dresse",
+        link: "/accessories/dresses",
+      },
+      {
+        name: "Tops & Tunic",
+        link: "/accessories/tops-tunics",
+      },
+      {
+        name: "Plazzo",
+        link: "/accessories/plazzos",
+      },
+      {
+        name: "Leheng",
+        link: "/accessories/lehenga",
+      },
+      {
+        name: "Middie",
+        link: "/accessories/middies",
+      },
+      {
+        name: "Salwar Set",
+        link: "/accessories/salwar-sets",
+      },
+      {
+        name: "Dhoti",
+        link: "/accessories/dhoti-pant",
+      },
+      {
+        name: "Bralet",
+        link: "/accessories/bralets",
+      },
+    ],
+  },
+  {
+    name: "Accessories",
+    link: "/accessories",
+
+    subRoutesWomenAcsies: [
+      {
+        categoryOne: "Women",
+      },
+      {
+        name: "Dresses",
+        link: "/accessories/dresses",
+      },
+      {
+        name: "Tops & Tunics",
+        link: "/accessories/tops-tunics",
+      },
+      {
+        name: "Plazzos",
+        link: "/accessories/plazzos",
+      },
+      {
+        name: "Lehenga",
+        link: "/accessories/lehenga",
+      },
+      {
+        name: "Middies",
+        link: "/accessories/middies",
+      },
+      {
+        name: "Salwar Sets",
+        link: "/accessories/salwar-sets",
+      },
+      {
+        name: "Dhoti Pant",
+        link: "/accessories/dhoti-pant",
+      },
+
+      {
+        name: "Bralets",
+        link: "/accessories/bralets",
+      },
+    ],
+    subRoutesKidsAcsies: [
       {
         categoryTwo: "Kids Wear",
       },
@@ -88,6 +163,81 @@ export const routes = [
   {
     name: "Home Decor",
     link: "/home-decor",
+    subRoutesWomenHD: [
+      {
+        categoryOne: "Women",
+      },
+      {
+        name: "Dresses",
+        link: "/accessories/dresses",
+      },
+      {
+        name: "Tops & Tunics",
+        link: "/accessories/tops-tunics",
+      },
+      {
+        name: "Plazzos",
+        link: "/accessories/plazzos",
+      },
+      {
+        name: "Lehenga",
+        link: "/accessories/lehenga",
+      },
+      {
+        name: "Middies",
+        link: "/accessories/middies",
+      },
+      {
+        name: "Salwar Sets",
+        link: "/accessories/salwar-sets",
+      },
+      {
+        name: "Dhoti Pant",
+        link: "/accessories/dhoti-pant",
+      },
+
+      {
+        name: "Bralets",
+        link: "/accessories/bralets",
+      },
+    ],
+    subRoutesKidsHD: [
+      {
+        categoryTwo: "Kids Wear",
+      },
+      {
+        name: "Dresse",
+        link: "/accessories/dresses",
+      },
+      {
+        name: "Tops & Tunic",
+        link: "/accessories/tops-tunics",
+      },
+      {
+        name: "Plazzo",
+        link: "/accessories/plazzos",
+      },
+      {
+        name: "Leheng",
+        link: "/accessories/lehenga",
+      },
+      {
+        name: "Middie",
+        link: "/accessories/middies",
+      },
+      {
+        name: "Salwar Set",
+        link: "/accessories/salwar-sets",
+      },
+      {
+        name: "Dhoti",
+        link: "/accessories/dhoti-pant",
+      },
+      {
+        name: "Bralet",
+        link: "/accessories/bralets",
+      },
+    ],
   },
 ];
 

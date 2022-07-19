@@ -4,8 +4,29 @@ import logo from "../Assets/morgan__logo-dark.png";
 import { routes } from "../constant/constant";
 import ExpandMenu from './Accessories/ExpandMenu'
 import { Link } from "react-router-dom";
+import ExpandMenuHome from "./HomeDecor/ExpandMenuHome";
+import ExpandCloth from "./Clothing/ExpandCloth";
+import { useState } from "react";
 
 const Drawer = ({ isOpen, toggleDrawer }) => {
+  const [isMenuOpenAcc, setIsMenuOpenAcc] = useState(false);
+  const [isMenuOpenHD, setIsMenuOpenAccHD] = useState(false);
+  const [isMenuOpenClo, setIsMenuOpenAccClo] = useState(false);
+  const toggleMenuAcc = () => {
+    setIsMenuOpenAcc(!isMenuOpenAcc);
+    setIsMenuOpenAccHD(false);
+    setIsMenuOpenAccClo(false);
+  };
+  const toggleMenuHD = () => {
+    setIsMenuOpenAccHD(!isMenuOpenHD);
+    setIsMenuOpenAcc(false);
+    setIsMenuOpenAccClo(false);
+  };
+  const toggleMenuClo = () => {
+    setIsMenuOpenAccClo(!isMenuOpenClo);
+    setIsMenuOpenAcc(false);
+    isMenuOpenHD(false);
+  };
   return (
     <>
       {isOpen &&
@@ -38,8 +59,35 @@ const Drawer = ({ isOpen, toggleDrawer }) => {
             <div>
               {
                 routes.map((route) => {
-                  if (route.subRoutesWomen) {
-                    return <ExpandMenu route={route} key={route.name} />;
+                  if (route.subRoutesWomenAcsies) {
+                    return (
+                      <ExpandMenu
+                        route={route}
+                        key={route.name}
+                        isMenuOpenAcc={isMenuOpenAcc}
+                        toggleMenuAcc={toggleMenuAcc}
+                      />
+                    );
+                  }
+                  if (route.subRoutesWomenHD) {
+                    return (
+                      <ExpandMenuHome
+                        route={route}
+                        key={route.name}
+                        isMenuOpenHD={isMenuOpenHD}
+                        toggleMenuHD={toggleMenuHD}
+                      />
+                    );
+                  }
+                  if (route.subRoutesWomenCloth) {
+                    return (
+                      <ExpandCloth
+                        route={route}
+                        key={route.name}
+                        isMenuOpenClo={isMenuOpenClo}
+                        toggleMenuClo={toggleMenuClo}
+                      />
+                    );
                   }
                 return (
                   <Link
