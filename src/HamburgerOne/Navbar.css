@@ -210,7 +210,7 @@
     display: none !important;
   }
 } */
-@media (max-width: 576px) {
+@media (max-width: 776px) {
   .navbar-component {
     display: none !important;
   }
@@ -220,7 +220,7 @@
   }
 }
 
-@media (min-width: 576px) {
+@media (min-width: 776px) {
   .draw-button {
     display: none !important;
   }

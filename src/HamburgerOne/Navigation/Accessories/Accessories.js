@@ -3,14 +3,13 @@ import styled from "styled-components";
 
 import { Link } from "react-router-dom";
 import { useState } from "react";
-import { routes } from "../../constant/constant";
 const Accessories = ({ route }) => {
   const [hover, setHover] = useState(false);
   const showSubMenu = () => {
     setHover(true);
   };
   const hideSubMenu = () => {
-    setHover(true);
+    setHover(false);
   };
 
   return (
@@ -21,7 +20,6 @@ const Accessories = ({ route }) => {
         style={{
           position: "relative",
           display: "inline-block",
-          // zIndex: 999,
         }}
         onMouseEnter={showSubMenu}
         onMouseLeave={hideSubMenu}
@@ -31,8 +29,6 @@ const Accessories = ({ route }) => {
           <div
             className="accessories-subroutes d-flex flex-row"
             style={{ opacity: 1, cursor: "pointer", zIndex: 999 }}
-            // onMouseEnter={showSubMenu}
-            // onMouseLeave={hideSubMenu}
           >
             <div className="parent-category me-4">
               {route.subRoutesWomen.map((subRoute, i) => {
@@ -78,26 +74,7 @@ const Accessories = ({ route }) => {
                 );
               })}
             </div>
-            {/* {route.subRoutesKids.map((subRoute) => {
-          return (
-            <>
-              {subRoute.categoryTwo && (
-                <span className="accessories-subroute">
-                  {subRoute.categoryTwo}
-                </span>
-              )}
-              {subRoute.name && (
-                <Link
-                  key={subRoute.name}
-                  to={subRoute.link}
-                  className="accessories-subroute"
-                >
-                  {subRoute.name}
-                </Link>
-              )}
-            </>
-          );
-        })} */}
+         
           </div>
         )}
       </div>

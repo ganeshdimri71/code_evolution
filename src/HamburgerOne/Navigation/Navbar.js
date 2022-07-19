@@ -3,6 +3,7 @@ import { Row, Container } from "react-bootstrap";
 import { Link } from "react-router-dom";
 import Avatar from "@material-ui/core/Avatar";
 import logo from "../Assets/morgan__logo-dark.png";
+import "../SearchButton.css";
 import { routes } from "../constant/constant";
 import { iconsRoutes } from "../constant/constant";
 import { FaBars } from "react-icons/fa";
@@ -32,7 +33,7 @@ const Navbar = ({ toggleDrawer, routes }) => {
           color: "white",
         }}
       >
-        <button
+        {/* <button
           className="draw-button"
           onClick={() => toggleDrawer()}
           style={{
@@ -42,7 +43,7 @@ const Navbar = ({ toggleDrawer, routes }) => {
           }}
         >
           <FaBars />
-        </button>
+        </button> */}
         <div className="navbar-logo">
           <Avatar
             size="sm"
@@ -52,6 +53,17 @@ const Navbar = ({ toggleDrawer, routes }) => {
             height={50}
           />
         </div>
+        {/* <form onsubmit="event.preventDefault();" role="search">
+          <label for="search">Search for stuff</label>
+          <input
+            id="search"
+            type="search"
+            placeholder="Search..."
+            autofocus
+            required
+          />
+          <button type="submit">Go</button>
+        </form> */}
         <div
           className="navbar-right"
           style={{
@@ -59,6 +71,17 @@ const Navbar = ({ toggleDrawer, routes }) => {
             gap: "1rem",
           }}
         >
+          <form onSubmit="event.preventDefault();" role="search">
+            <label htmlFor="search">Search for stuff</label>
+            <input
+              id="search"
+              type="search"
+              placeholder="Search..."
+              autofocus
+              required
+            />
+            <button type="submit">Go</button>
+          </form>
           <div
             className="navbar-component"
             style={{
@@ -122,6 +145,18 @@ const Navbar = ({ toggleDrawer, routes }) => {
               );
             })}
           </div>
+             <button
+          className="draw-button"
+          onClick={() => toggleDrawer()}
+          style={{
+            all: "unset",
+            fontSize: "2rem",
+            display: "grid",
+            alignSelfL:'center'
+          }}
+        >
+          <FaBars />
+        </button>
         </div>
       </div>
     </Row>

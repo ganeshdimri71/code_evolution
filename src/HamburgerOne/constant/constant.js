@@ -92,11 +92,7 @@ export const routes = [
 ];
 
 export const iconsRoutes = [
-  {
-    name: "search",
-    link: "/search",
-    icon: BsSearch,
-  },
+ 
   {
     name: "cart",
     link: "/cart",
