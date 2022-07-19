@@ -1,94 +1,57 @@
 import React from "react";
-import { Row, Container } from "react-bootstrap";
+import { Row } from "react-bootstrap";
 import { Link } from "react-router-dom";
 import Avatar from "@material-ui/core/Avatar";
+import { FaBars } from "react-icons/fa";
 import logo from "../Assets/morgan__logo-dark.png";
 import "../SearchButton.css";
-import { routes } from "../constant/constant";
 import { iconsRoutes } from "../constant/constant";
-import { FaBars } from "react-icons/fa";
 import Accessories from "./Accessories/Accessories";
 
 const Navbar = ({ toggleDrawer, routes }) => {
   return (
     <Row
-      className="navbar-wrapper"
-      style={{
-        backgroundColor: "#6f07f6",
-        width: "100%",
-        margin: "0",
-      }}
+      className="navbar-wrapper w-100 m-0"
+      style={{ backgroundColor: "#6f07f6" }}
     >
       <div
         className="navbar-container 
+        d-flex justify-content-between 
+        align-items-center w-100
+        my-0 mx-auto 
               "
         style={{
           padding: "2rem",
           height: "70px",
           maxWidth: "1300px",
-          margin: "0 auto",
-          display: "flex",
-          justifyContent: "space-between",
-          alignItems: "center",
           color: "white",
         }}
       >
-        {/* <button
-          className="draw-button"
-          onClick={() => toggleDrawer()}
-          style={{
-            all: "unset",
-            fontSize: "2rem",
-            display: "grid",
-          }}
-        >
-          <FaBars />
-        </button> */}
         <div className="navbar-logo">
-          <Avatar
-            size="sm"
-            src={logo}
-            className="logo_avatar"
-            width={50}
-            height={50}
-          />
+          <Avatar size="sm" src={logo} width={50} height={50} />
         </div>
-        {/* <form onsubmit="event.preventDefault();" role="search">
-          <label for="search">Search for stuff</label>
-          <input
-            id="search"
-            type="search"
-            placeholder="Search..."
-            autofocus
-            required
-          />
-          <button type="submit">Go</button>
-        </form> */}
         <div
-          className="navbar-right"
+          className="navbar-right d-flex"
           style={{
-            display: "flex",
             gap: "1rem",
           }}
         >
-          <form onSubmit="event.preventDefault();" role="search">
+          <form onSubmit={(event) => event.preventDefault()} role="search">
             <label htmlFor="search">Search for stuff</label>
             <input
               id="search"
               type="search"
               placeholder="Search..."
-              autofocus
+              autoFocus
               required
             />
             <button type="submit">Go</button>
           </form>
           <div
-            className="navbar-component"
+            className="navbar-component d-flex align-items-center"
             style={{
-              display: "flex",
               gap: "0.5rem",
               fontSize: "1rem",
-              alignItems: "center",
             }}
           >
             {routes.map((route) => {
@@ -99,9 +62,10 @@ const Navbar = ({ toggleDrawer, routes }) => {
                 <Link
                   key={route.name}
                   to={route.link}
-                  className="navbar-link-one"
+                  className="navbar-link-one
+                  text-decoration-none
+                  "
                   style={{
-                    textDecoration: "none",
                     padding: "0.5rem 0.5rem",
                     transition: "0.5s ease",
                   }}
@@ -112,12 +76,11 @@ const Navbar = ({ toggleDrawer, routes }) => {
             })}
           </div>
           <div
-            className="navbar-component-icon "
+            className="d-flex
+             align-items-center"
             style={{
-              display: "flex",
               gap: "0.5rem",
               fontSize: "1rem",
-              alignItems: "center",
             }}
           >
             {iconsRoutes.map((iconRoute) => {
@@ -126,37 +89,23 @@ const Navbar = ({ toggleDrawer, routes }) => {
                   className="navbar-icon"
                   key={iconRoute.name}
                   to={iconRoute.link}
-                  // className="navbar-icon"
                 >
                   <iconRoute.icon style={{ width: "25px", height: "25px" }} />
-                  {/* <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    width="22"
-                    height="22"
-                    fill="currentColor"
-                    className="bi bi-person-fill search"
-                    viewBox="0 0 16 16"
-                  >
-                    <path d="M3 14s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1H3zm5-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6z" />
-                  </svg> */}
-                  {/* <iconRoute.icon /> */}
-                  {/* hello */}
                 </Link>
               );
             })}
           </div>
-             <button
-          className="draw-button"
-          onClick={() => toggleDrawer()}      
-          style={{
-            all: "unset",
-            fontSize: "2rem",
-            display: "grid",
-            alignSelf:'center '
-          }}
-        >
-          <FaBars />
-        </button>
+          <button
+            className="draw-button
+            align-items-center d-grid justify-self-flex-end"
+            onClick={() => toggleDrawer()}
+            style={{
+              all: "unset",
+              fontSize: "2rem",
+            }}
+          >
+            <FaBars />
+          </button>
         </div>
       </div>
     </Row>

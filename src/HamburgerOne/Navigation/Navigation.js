@@ -11,6 +11,7 @@ import { iconsRoutes } from "../constant/constant";
 const Navigation = () => {
   const [isOpen, setIsOpen] = useState(false);
   const toggleDrawer = () => {
+    console.log('isPoen',isOpen)
     setIsOpen(!isOpen);
   };
   return (
