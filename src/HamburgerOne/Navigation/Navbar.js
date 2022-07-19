@@ -2,7 +2,8 @@ import React from "react";
 import { Row } from "react-bootstrap";
 import { Link } from "react-router-dom";
 import Avatar from "@material-ui/core/Avatar";
-import { FaBars } from "react-icons/fa";
+import { FaBars, FaAdn } from "react-icons/fa";
+import { AiFillCloseCircle } from "react-icons/ai";
 import logo from "../Assets/morgan__logo-dark.png";
 import "../SearchButton.css";
 import { iconsRoutes } from "../constant/constant";
@@ -10,7 +11,7 @@ import Accessories from "./Accessories/Accessories";
 import HomeDecor from "./HomeDecor/HomeDecor";
 import Clothing from "./Clothing/Clothing";
 
-const Navbar = ({ toggleDrawer, routes }) => {
+const Navbar = ({ toggleDrawer, routes, isOpen }) => {
   return (
     <Row
       className="navbar-wrapper w-100 m-0"
@@ -108,15 +109,15 @@ const Navbar = ({ toggleDrawer, routes }) => {
             align-items-center d-grid"
             onClick={() => toggleDrawer()}
             style={{
-              position: 'absolute',
-              right:'1rem',
+              position: "absolute",
+              right: "1rem",
               fontSize: "2rem",
-              marginTop:'5px'
+              marginTop: "5px",
             }}
           >
-            <FaBars
-              style={{alignSelf:'center'}}
-            />
+            {!isOpen ? (
+              <FaBars style={{ alignSelf: "center", transition: "1s ease" }} />
+            ):null}
           </div>
         </div>
       </div>

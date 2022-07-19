@@ -1,8 +1,9 @@
 import React from "react";
 import Avatar from "@material-ui/core/Avatar";
+import { AiFillCloseCircle } from "react-icons/ai";
 import logo from "../Assets/morgan__logo-dark.png";
 import { routes } from "../constant/constant";
-import ExpandMenu from './Accessories/ExpandMenu'
+import ExpandMenu from "./Accessories/ExpandMenu";
 import { Link } from "react-router-dom";
 import ExpandMenuHome from "./HomeDecor/ExpandMenuHome";
 import ExpandCloth from "./Clothing/ExpandCloth";
@@ -29,11 +30,13 @@ const Drawer = ({ isOpen, toggleDrawer }) => {
   };
   return (
     <>
-      {isOpen &&
-        <div onClick={toggleDrawer}
-          className="back-drop w-100 h-100 position-absolute">
-        </div>
-      }
+      {isOpen && (
+        <div
+          onClick={toggleDrawer}
+          className="back-drop w-100 h-100 position-absolute"
+        ></div>
+      )}
+
       {isOpen && (
         <div
           className="navbar-drawer position-absolute"
@@ -49,49 +52,43 @@ const Drawer = ({ isOpen, toggleDrawer }) => {
             }}
           >
             <h2>
-              <Avatar
-                size="sm"
-                src={logo}
-                width={50}
-                height={50}
-              />
+              <Avatar size="sm" src={logo} width={50} height={50} />
             </h2>
             <div>
-              {
-                routes.map((route) => {
-                  if (route.subRoutesWomenAcsies) {
-                    return (
-                      <ExpandMenu
-                        route={route}
-                        key={route.name}
-                        isMenuOpenAcc={isMenuOpenAcc}
-                        toggleMenuAcc={toggleMenuAcc}
-                      />
-                    );
-                  }
-                  if (route.subRoutesWomenHD) {
-                    return (
-                      <ExpandMenuHome
-                        route={route}
-                        key={route.name}
-                        isMenuOpenHD={isMenuOpenHD}
-                        toggleMenuHD={toggleMenuHD}
-                      />
-                    );
-                  }
-                  if (route.subRoutesWomenCloth) {
-                    return (
-                      <ExpandCloth
-                        route={route}
-                        key={route.name}
-                        isMenuOpenClo={isMenuOpenClo}
-                        toggleMenuClo={toggleMenuClo}
-                      />
-                    );
-                  }
+              {routes.map((route) => {
+                if (route.subRoutesWomenAcsies) {
+                  return (
+                    <ExpandMenu
+                      route={route}
+                      key={route.name}
+                      isMenuOpenAcc={isMenuOpenAcc}
+                      toggleMenuAcc={toggleMenuAcc}
+                    />
+                  );
+                }
+                if (route.subRoutesWomenHD) {
+                  return (
+                    <ExpandMenuHome
+                      route={route}
+                      key={route.name}
+                      isMenuOpenHD={isMenuOpenHD}
+                      toggleMenuHD={toggleMenuHD}
+                    />
+                  );
+                }
+                if (route.subRoutesWomenCloth) {
+                  return (
+                    <ExpandCloth
+                      route={route}
+                      key={route.name}
+                      isMenuOpenClo={isMenuOpenClo}
+                      toggleMenuClo={toggleMenuClo}
+                    />
+                  );
+                }
                 return (
                   <Link
-                    className='d-flex text-decoration-none'
+                    className="d-flex text-decoration-none"
                     onClick={toggleDrawer}
                     key={route.name}
                     to={route.link}
@@ -107,6 +104,28 @@ const Drawer = ({ isOpen, toggleDrawer }) => {
               })}
             </div>
           </div>
+          {isOpen && (
+            <div
+              className="draw-button
+            align-items-center d-grid"
+              onClick={() => toggleDrawer()}
+              style={{
+                position: "absolute",
+                right: "1rem",
+                top: "1rem",
+                fontSize: "2rem",
+                marginTop: "5px",
+              }}
+            >
+              <AiFillCloseCircle
+                style={{
+                  alignSelf: "center",
+                  transition: "1s ease",
+                  color: "#ff0000de",
+                }}
+              />
+            </div>
+          )}
         </div>
       )}
     </>
