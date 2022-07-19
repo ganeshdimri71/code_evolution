@@ -121,7 +121,7 @@ const Drawer = ({ isOpen, toggleDrawer }) => {
                 style={{
                   alignSelf: "center",
                   transition: "1s ease",
-                  color: "#ff0000de",
+                  color: "#e12626",
                 }}
               />
             </div>
