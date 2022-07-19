@@ -12,7 +12,7 @@ const Navbar = ({ toggleDrawer, routes }) => {
   return (
     <Row
       className="navbar-wrapper w-100 m-0"
-      style={{ backgroundColor: "#6f07f6" }}
+      style={{ backgroundColor: "black" }}
     >
       <div
         className="navbar-container 
@@ -95,17 +95,21 @@ const Navbar = ({ toggleDrawer, routes }) => {
               );
             })}
           </div>
-          <button
+          <div
             className="draw-button
-            align-items-center d-grid justify-self-flex-end"
+            align-items-center d-grid"
             onClick={() => toggleDrawer()}
             style={{
-              all: "unset",
+              position: 'absolute',
+              right:'1rem',
               fontSize: "2rem",
+              marginTop:'5px'
             }}
           >
-            <FaBars />
-          </button>
+            <FaBars
+              style={{alignSelf:'center'}}
+            />
+          </div>
         </div>
       </div>
     </Row>

@@ -48,7 +48,7 @@ const Drawer = ({ isOpen, toggleDrawer }) => {
                     key={route.name}
                     to={route.link}
                     style={{
-                      color: "black",
+                      color: "white",
                       fontSize: "1rem",
                       padding: "0.5rem",
                     }}

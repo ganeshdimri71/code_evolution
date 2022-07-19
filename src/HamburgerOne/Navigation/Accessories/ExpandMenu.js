@@ -7,7 +7,9 @@ const ExpandMenu = ({ route }) => {
     setIsMenuOpen(!isMenuOpen);
   };
   return (
-    <div className="expand-menu" onClick={toggleMenu}>
+    <div className="expand-menu" onClick={toggleMenu}
+      style={{color:'white'}}
+    >
       <div className="expand-menu-button d-flex
       align-items-center justify-content-between"
         onClick={toggleMenu}>
