@@ -34,11 +34,13 @@ import './index.css'
 import ReactDOM from 'react-dom';
 import reportWebVitals from './reportWebVitals';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import App31 from './App31'
+import App32 from './App32'
 import { BrowserRouter } from 'react-router-dom'
 
 import { createGlobalStyle } from 'styled-components';
 import "bootstrap/dist/css/bootstrap.min.css";
+// import '~sbuttons/dist/sbuttons.min.css';
+import 'sbuttons/dist/sbuttons.min.css'
 // const GlobalStyle = createGlobalStyle`
 // @import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200;300;400;500;600;700&display=swap');;
 /* *{
@@ -69,7 +71,7 @@ ReactDOM.render(
     <React.StrictMode>
         <BrowserRouter>
              {/* <GlobalStyle />  */}
-            <App31 />
+            <App32 />
         </BrowserRouter>
 
     </React.StrictMode >
