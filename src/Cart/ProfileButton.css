@@ -5,7 +5,7 @@
     box-shadow: none !important;
 }
 
-..profile-button .profile-submenu-button .btn:focus{
+.profile-button .profile-submenu-button .btn:focus{
     outline: none !important;
     box-shadow: none !important;
 }
