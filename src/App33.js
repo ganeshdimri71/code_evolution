@@ -119,7 +119,7 @@ const App33 = () => {
           </div>
 
           {toggle && (
-            <div style={{ width: "30%" }}>
+            <div style={{ width: "30%" }} className='profile-toggle-button'>
               <Button
                 variant="outline-secondary"
                 className="mb-2"
