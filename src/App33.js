@@ -53,7 +53,19 @@ const App33 = () => {
               onClick={() => {
                 setToggle(!toggle);
                 document
-                  .getElementById("profile-toggle-button-fade")
+                  .getElementById("profile-toggle-button-fade-one")
+                  .classList.toggle("fade");
+                document
+                  .getElementById("profile-toggle-button-fade-two")
+                  .classList.toggle("fade");
+                document
+                  .getElementById("profile-toggle-button-fade-three")
+                  .classList.toggle("fade");
+                document
+                  .getElementById("profile-toggle-button-fade-four")
+                  .classList.toggle("fade");
+                document
+                  .getElementById("profile-toggle-button-fade-five")
                   .classList.toggle("fade");
               }}
               variant="outline-secondary"
@@ -123,47 +135,52 @@ const App33 = () => {
             </Button>
           </div>
 
-            <div
-              style={{ width: "30%" }}
-              className="profile-toggle-button"
-              id="profile-toggle-button-fade"
+          <div
+            style={{ width: "30%" }}
+            className="profile-toggle-button"
+            id="profile-toggle-button-fade"
+          >
+            <Button
+              variant="outline-secondary"
+              className="mb-2"
+              id="profile-toggle-button-fade-one"
+              style={{ width: "100%" }}
             >
-              <Button
-                variant="outline-secondary"
-                className="mb-2"
-                style={{ width: "100%" }}
-              >
-                Option 1
-              </Button>
-              <Button
-                variant="outline-secondary"
-                className="mb-2"
-                style={{ width: "100%" }}
-              >
-                Option 1
-              </Button>
-              <Button
-                variant="outline-secondary"
-                className="mb-2"
-                style={{ width: "100%" }}
-              >
-                Option 2
-              </Button>
-              <Button
-                variant="outline-secondary"
-                className="mb-2"
-                style={{ width: "100%" }}
-              >
-                Option 3
-              </Button>
-              <Button
-                variant="outline-secondary"
-                className="mb-2"
-                style={{ width: "100%" }}
-              >
-                Option 4
-              </Button>
-            </div>
+              Option 1
+            </Button>
+            <Button
+              variant="outline-secondary"
+              id="profile-toggle-button-fade-two"
+              className="mb-2"
+              style={{ width: "100%" }}
+            >
+              Option 1
+            </Button>
+            <Button
+              variant="outline-secondary"
+              id="profile-toggle-button-fade-three"
+              className="mb-2"
+              style={{ width: "100%" }}
+            >
+              Option 2
+            </Button>
+            <Button
+              variant="outline-secondary"
+              id="profile-toggle-button-fade-four"
+              className="mb-2"
+              style={{ width: "100%" }}
+            >
+              Option 3
+            </Button>
+            <Button
+              variant="outline-secondary"
+              id="profile-toggle-button-fade-five"
+              className="mb-2"
+              style={{ width: "100%" }}
+            >
+              Option 4
+            </Button>
+          </div>
         </div>
       </Row>
     </Container>
