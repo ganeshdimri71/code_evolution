@@ -34,7 +34,7 @@ import './index.css'
 import ReactDOM from 'react-dom';
 import reportWebVitals from './reportWebVitals';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import App32 from './App32'
+import App33 from './App33'
 import { BrowserRouter } from 'react-router-dom'
 
 import { createGlobalStyle } from 'styled-components';
@@ -68,15 +68,13 @@ body{
 `; */
 
 ReactDOM.render(
-    <React.StrictMode>
-        <BrowserRouter>
-             {/* <GlobalStyle />  */}
-            <App32 />
-        </BrowserRouter>
-
-    </React.StrictMode >
-    ,
-    document.getElementById('root')
+  <React.StrictMode>
+    <BrowserRouter>
+      {/* <GlobalStyle />  */}
+      <App33 />
+    </BrowserRouter>
+  </React.StrictMode>,
+  document.getElementById("root")
 );
 
 // If you want to start measuring performance in your app, pass a function
