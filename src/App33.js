@@ -2,6 +2,7 @@ import React from 'react'
 import Common from './Cart/Common'
 import { Container, Row, Button } from "react-bootstrap";
 import { Route, Routes } from 'react-router-dom'
+import './Cart/ProfileButton.css'
 import Cart from './Cart/Cart'
 import Information from "./Cart/Information";
 import Shipping from "./Cart/Shipping";
