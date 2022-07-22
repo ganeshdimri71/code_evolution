@@ -1,17 +1,17 @@
-import React from 'react'
-import Common from './Cart/Common'
+import React from "react";
+import Common from "./Cart/Common";
 import { Container, Row, Button } from "react-bootstrap";
-import { Route, Routes } from 'react-router-dom'
-import './Cart/ProfileButton.css'
-import Cart from './Cart/Cart'
+import { Route, Routes } from "react-router-dom";
+import "./Cart/ProfileButton.css";
+import Cart from "./Cart/Cart";
 import Information from "./Cart/Information";
 import Shipping from "./Cart/Shipping";
 import Payment from "./Cart/Payment";
-import { useState } from 'react';
+import { useState } from "react";
 import { FaChevronCircleRight } from "react-icons/fa";
 
 const App33 = () => {
-  const [toggle, setToggle] = useState(false)
+  const [toggle, setToggle] = useState(false);
   const [active, setActive] = useState({
     cardActive: true,
     informationActive: false,
@@ -50,7 +50,12 @@ const App33 = () => {
         <div className="d-flex flex-row profile-button">
           <div style={{ width: "30%" }} className="me-2 profile-submenu-button">
             <Button
-              onClick={() => setToggle(!toggle)}
+              onClick={() => {
+                setToggle(!toggle);
+                document
+                  .getElementById("profile-toggle-button-fade")
+                  .classList.toggle("fade");
+              }}
               variant="outline-secondary"
               className="me-2 mb-2 align-self-start position-relative"
               style={{ width: "100%" }}
@@ -118,8 +123,11 @@ const App33 = () => {
             </Button>
           </div>
 
-          {toggle && (
-            <div style={{ width: "30%" }} className='profile-toggle-button'>
+            <div
+              style={{ width: "30%" }}
+              className="profile-toggle-button"
+              id="profile-toggle-button-fade"
+            >
               <Button
                 variant="outline-secondary"
                 className="mb-2"
@@ -156,11 +164,10 @@ const App33 = () => {
                 Option 4
               </Button>
             </div>
-          )}
         </div>
       </Row>
     </Container>
   );
-}
+};
 
-export default App33
+export default App33;

@@ -15,3 +15,16 @@
     box-shadow: none !important;
 }
 
+#profile-toggle-button-fade{
+    opacity: 1;
+    -webkit-transition: opacity 1s ease-in-out;
+    -moz-transition: opacity 1s ease-in-out;
+    -ms-transition: opacity 1s ease-in-out;
+    -o-transition: opacity 1s ease-in-out;
+    transition: opacity 1s ease-in-out;
+}
+#profile-toggle-button-fade.fade{
+    opacity: 0;
+}
+
+
