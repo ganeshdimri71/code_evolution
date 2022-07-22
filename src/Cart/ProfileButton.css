@@ -1,0 +1,17 @@
+
+
+.profile-button .profile-menu-button .btn:focus{
+    outline: none !important;
+    box-shadow: none !important;
+}
+
+..profile-button .profile-submenu-button .btn:focus{
+    outline: none !important;
+    box-shadow: none !important;
+}
+
+.profile-toggle-button .btn:focus{
+    outline:none !important;
+    box-shadow: none !important;
+}
+

@@ -46,8 +46,8 @@ const App33 = () => {
       </Row>
 
       <Row>
-        <div className="d-flex flex-row">
-          <div style={{ width: "30%" }} className='me-2'>
+        <div className="d-flex flex-row profile-button">
+          <div style={{ width: "30%" }} className="me-2 profile-submenu-button">
             <Button
               onClick={() => setToggle(!toggle)}
               variant="outline-secondary"
@@ -55,10 +55,6 @@ const App33 = () => {
               style={{ width: "100%" }}
             >
               Profile
-              {/* <FaChevronCircleRight size={25}
-            style={{right:'0rem'}}
-            className='position-absolute'
-          /> */}
               {!toggle ? (
                 <svg
                   style={{ right: "0rem" }}
